@@ -1,0 +1,69 @@
+<!--导航条-->
+
+<view class="navbar">
+ <lable wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">
+  <text>{{item}}</text>
+ </lable>
+</view>
+<view wx:if="{{list.length>0}}" class='list'>
+ <!-- 外层 -->
+ <view class='cont_count' wx:for="{{list}}" wx:key="key">
+  <!-- 编号 -->
+  <view class='seria'>
+   <label class='seriac_name'>
+    停车场:
+    <text>{{item.name}}</text>
+   </label>
+  </view>
+   <view class='seria'>
+   <label class='seriac_name'>
+    地址:
+    <text>{{item.address}}</text>
+   </label>
+  </view>
+  <!-- <view class='seria'>
+   <label class='seriac_name'>
+    车位:
+    <text>{{item.region}}</text>区<text>{{item.port}}</text>号车位
+   </label>
+  </view>-->
+
+
+    
+  <view class='seria' wx:if="{{currentTab==1}}">
+  <label class='seriac_name'>
+    预约时间:
+    <text>{{item.created_time}}</text>
+   </label>
+  </view>
+
+  <view class='seria' wx:if="{{currentTab==0}}">
+  <label class='seriac_name'>
+    停车时间:
+    <text>{{item.in_time}}</text>
+   </label>
+  </view>
+ <view class='seria yang' wx:if="{{item.out_time}}">
+  <label class='seriac_name'>
+    取车时间:
+    <text>{{item.out_time}}</text>
+   </label>
+  </view>
+
+
+  <view class='coent_list'>
+   <label  wx:if="{{item.out_time}}"  class='coent_log_base1'  data-parkId='{{item.parkId}}' data-outtime='{{item.out_time}}' bindtap='goCommentPage4'>删除记录</label>
+  <label  wx:if="{{currentTab==0&!item.out_time}}" class='coent_log_base1'  data-parkId='{{item.parkId}}' bindtap='goCommentPage3'>取车</label>
+   <label  wx:if="{{currentTab==1}}" class='coent_log_base1'  data-parkId='{{item.parkId}}' bindtap='goCommentPage1'>停车</label>
+   <label  wx:if="{{currentTab==1}}"  class='coent_log_base2'  data-parkId='{{item.parkId}}' bindtap='goCommentPage2'>取消预约</label>
+   <label  class='coent_log_base'>{{item.status}}</label>
+  </view>
+
+ </view>
+</view>
+<!-- 否则 -->
+<view wx:else class='cont_count'>
+ <label class='none_tab'>数据为空哦~~</label>
+</view>
+
+

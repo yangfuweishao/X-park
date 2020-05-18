@@ -1,0 +1,7 @@
+ <view class="category-item">
+      <view bindtap='btnclick4' class="category-item">
+        <image class="category-item-image1" src="/image/kf.png" />
+     
+       <text class="category-item-text1">点击搜索附近停车场</text>
+    </view>
+    </view>

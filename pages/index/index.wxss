@@ -1,0 +1,21 @@
+/* page/index/index.wxss */
+.category-item {
+ display: flex;
+ width: 304px;
+ text-align: center;
+ flex-direction: column;
+}
+
+.category-item-image {
+ width: 202px;
+ height: 151px;
+ overflow: unset;
+ padding: 15px 12px 0 6px;
+}
+
+.category-item-image1 {
+  width: 202px;
+ height: 151px;
+ overflow: unset;
+ padding: 15px 12px 0 6px;
+}

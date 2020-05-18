@@ -1,0 +1,245 @@
+page {
+ background: #69e6db;
+}
+.container {
+ width: 90%;
+ margin: 4%;
+ background: white;
+}
+
+.item_root {
+ background: white;
+ padding: 8px 10px;
+}
+.textarea80px {
+ /* 输入文本框的公有属性 */
+ width: 100%;
+ height: 80px;
+ border: 1px solid gainsboro;
+}
+
+.textarea25px {
+ width: 100%;
+ height: 25px;
+ border: 1px solid gainsboro;
+}
+
+.my_item_small {
+ /* 带选择箭头 */
+ width: 90%;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ padding: 8px 10px;
+ background: white;
+ /* border-bottom: 1px solid gainsboro; */
+}
+
+/* 发布按钮 */
+.btn_fabu {
+ width: 100%;
+ height: 40px;
+ align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0px;
+  z-index: 100;
+}
+
+
+/* 评论弹窗 */
+
+.toast-box {
+ width: 100%;
+ height: 100%;
+ opacity: 1;
+ position: fixed;
+ top: 0px;
+ left: 0px;
+}
+
+.toastbg {
+ opacity: 0.2;
+ background-color: black;
+ position: absolute;
+ width: 100%;
+ min-height: 100vh;
+}
+
+.showToast {
+ position: absolute;
+ opacity: 1;
+ width: 70%;
+ margin-left: 15%;
+ margin-top: 40%;
+}
+
+.toast-title {
+ padding-left: 5%;
+ background-color: #2196f3;
+ color: white;
+ padding-top: 2vh;
+ padding-bottom: 2vh;
+ border-top-right-radius: 16rpx;
+ border-top-left-radius: 16rpx;
+}
+
+.toast-main {
+ padding-top: 2vh;
+ padding-bottom: 2vh;
+ background-color: white;
+ text-align: center;
+}
+
+.toast-input {
+ margin-left: 5%;
+ margin-right: 5%;
+ border: 1px solid #ddd;
+ padding-left: 2vh;
+ padding-right: 2vh;
+ padding-top: 1vh;
+ padding-bottom: 1vh;
+}
+
+.textarea_comment {
+ height: 80px;
+ width: 100%;
+}
+
+.toast-button {
+ display: flex;
+}
+
+.button1 {
+ width: 50%;
+}
+
+.button2 {
+ width: 50%;
+}
+
+.button1 button {
+ width: 100%;
+ background-color: white;
+ color: red;
+ border-radius: 0px;
+ border-bottom-left-radius: 16rpx;
+}
+
+.button2 button {
+ width: 100%;
+ background-color: white;
+ color: black;
+ border-radius: 0px;
+ border-bottom-right-radius: 16rpx;
+}
+
+.picker {
+ padding-top: 1vh;
+ padding-bottom: 1vh;
+}
+
+/* 标签功能 */
+
+.coent_list {
+ position: relative;
+ width: 20%;
+ height: 150rpx;
+ line-height: 150rpx;
+ /* border-bottom: 6rpx solid #ddd; */
+ background-color: #fff;
+}
+/*采纳*/
+
+/* 列表样式 */
+.singleTrade {
+ background: #fff;
+ padding: 20rpx;
+ display: flex;
+ border-bottom: -2rpx solid #fafafa;
+}
+
+.name_root {
+ display: flex;
+ flex-direction: column;
+ width: 130rpx;
+}
+
+.img {
+ width: 100rpx;
+ height: 100rpx;
+ border-radius: 100rpx;
+}
+
+.name {
+ font-size: 27rpx;
+ color: black;
+}
+.content {
+ flex: 1;
+ margin: 0rpx 15rpx;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ font-size: 25rpx;
+ line-height: 20rpx;
+ display: -webkit-box;
+ word-break: break-all;
+ text-overflow: ellipsis;
+ overflow: hidden;
+ -webkit-box-orient: vertical;
+}
+.coent_del {
+ position: absolute;
+ color: darkgoldenrod;
+ top: 60%;
+ right: 0rpx;
+ display: inline-block;
+ width: 180rpx;
+ text-align: center;
+ height: 56rpx;
+ border: 1rpx solid #d3d3d3;
+ font-size: 30rpx;
+ line-height: 56rpx;
+}
+.coent_log_base {
+ position: absolute;
+ top: 60%;
+ right: 0rpx;
+ display: inline-block;
+ width: 180rpx;
+ text-align: center;
+ height: 56rpx;
+ border: 1rpx solid #d3d3d3;
+ font-size: 30rpx;
+ line-height: 56rpx;
+}
+.coent_zan{
+ position: absolute;
+ top: 5%;
+ right: 0rpx;
+ display: inline-block;
+ width: 180rpx;
+ text-align: center;
+ height: 56rpx;
+ border: 1rpx solid #d3d3d3;
+ font-size: 30rpx;
+ line-height: 56rpx;
+}
+.coent_yizan{
+ position: absolute;
+ color: darkgoldenrod;
+ top: 5%;
+ right: 0rpx;
+ display: inline-block;
+ width: 180rpx;
+ text-align: center;
+ height: 56rpx;
+ border: 1rpx solid #d3d3d3;
+ font-size: 30rpx;
+ line-height: 56rpx;
+}
+.time{
+   position: relative;
+   top: 26%;
+}

@@ -1,0 +1,49 @@
+<view class="container">
+<view wx:if="{{list.length>0}}">
+ <!-- 外层 -->
+ <view class='cont_count' wx:for="{{list}}" wx:key="key">
+  <view class='singleTrade'>
+   <view class='name_root'>
+    <image src='{{item.avatar_url}}' class='img' />
+    <text class='name'>{{item.nickname}}</text>
+   </view>
+
+
+   <view class='content'>{{item.contest}}
+<view class='time'>{{item.created_time}}</view>
+</view>
+
+  </view>
+ </view>
+</view>
+<!-- 否则 -->
+<view wx:else class='cont_count'>
+ <label class='none_tab'>暂时没有反馈~~</label>
+</view>
+
+<!-- 提交按钮 -->
+<button class='btn_fabu' bindtap='formSubmit' type='primary'>发布意见反馈</button>
+</view>
+
+
+<view class='toast-box' hidden='{{!isShowComment}}'>
+ <view class='toastbg'></view>
+ <view class='showToast'>
+  <view class='toast-title'>
+   <text>输入您的意见反馈</text>
+  </view>
+  <view class='toast-main'>
+   <view class='toast-input'>
+    <textarea class='textarea_comment' placeholder='请输入您的反馈意见' bindinput='setValue'></textarea>
+   </view>
+  </view>
+  <view class='toast-button'>
+   <view class='button1' bindtap='cancelComment'>
+    <button >取消</button>
+   </view>
+   <view class='button2' bindtap='submitComment'>
+    <button >确定</button>
+   </view>
+  </view>
+ </view>
+</view>

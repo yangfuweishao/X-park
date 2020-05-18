@@ -1,0 +1,23 @@
+
+// 支持es4语法
+var filter = {
+	numberToFixed: function(date){
+        console.log(date)
+   date = new Date(date);
+   var y=date.getFullYear();
+   var m=date.getMonth()+1;
+   var d=date.getDate();
+   var h=date.getHours();
+   var m1=date.getMinutes();
+   var s=date.getSeconds();
+   m = m<10?("0"+m):m;
+   d = d<10?("0"+d):d;
+   let yang = y+"-"+m+"-"+d+" "+h+":"+m1+":"+s;
+   return yang;
+   console.log(yang)
+	}
+}
+// 导出对外暴露的属性
+module.exports = {
+	numberToFixed: filter.numberToFixed
+}
